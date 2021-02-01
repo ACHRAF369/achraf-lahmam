@@ -1,0 +1,41 @@
+header,nav ,section,footer {
+      background: #659494;
+      border-radius: 5px;
+      color: white;
+      font-family: arial, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 20px;
+}
+header:before,nav:before ,footer:before
+    {content: "<";}
+    header:after,nav:after,footer:after{
+          content:">";
+    }
+    div{ 
+      background: #659494;
+      border-radius: 5px;
+      color: white;
+      font-family: arial, sans-serif;
+      font-size: 30px;
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      
+    
+    }
+  .BTV{
+        border: 1px solid rgb(250, 245, 245);
+        width: 230px;
+        height:90px;
+        text-align: justify;
+    margin:30px;
+    line-height: 1px; 
+    text-decoration: none;
+    padding:30px;
+list-style: none;
+text-align: center;
+    }
+  
