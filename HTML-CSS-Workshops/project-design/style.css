@@ -27,10 +27,10 @@ body{
     border: 1px solid black;
     height: 50%;
     }
-.headr a{
+.headr button{
     text-decoration: none;
     color: black;
-
+  
 }
 .medium2 div{
     font-size: 10px;

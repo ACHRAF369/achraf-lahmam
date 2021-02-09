@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\design"
+		},
+		{
+			"path": "..\\..\\..\\Nouveau dossier\\project-design-2"
+		},
+		{
+			"path": "..\\..\\..\\Nouveau dossier\\project-design"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\test login"
+		},
+		{
+			"path": "..\\..\\..\\next"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "project-design"
+	}
+}
