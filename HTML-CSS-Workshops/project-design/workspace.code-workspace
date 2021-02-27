@@ -1,26 +1,22 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\..\\design"
+			"path": "..\\..\\..\\button"
 		},
 		{
-			"path": "..\\..\\..\\Nouveau dossier\\project-design-2"
-		},
-		{
-			"path": "..\\..\\..\\Nouveau dossier\\project-design"
+			"path": "..\\..\\..\\Nouveau dossier (3)"
 		},
 		{
 			"path": "."
 		},
 		{
-			"path": "..\\..\\..\\test login"
+			"path": "..\\..\\..\\next"
 		},
 		{
-			"path": "..\\..\\..\\next"
+			"path": "..\\..\\..\\images"
 		}
 	],
 	"settings": {
-		"liveServer.settings.port": 5501,
-		"liveServer.settings.multiRootWorkspaceName": "project-design"
+		"liveServer.settings.multiRootWorkspaceName": "Nouveau dossier (3)"
 	}
 }
