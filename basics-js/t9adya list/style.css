@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2family=monsterrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: magenta;
+    font-weight: 400;
+    font-size:16px;
+    font-family:'Montserrat', sans-serif;
+    height: 100vh;
+    position:relative;
+}
+
+.container{
+    width: 450px;
+    background-color:white;
+    border-radius: 15px;
+    box-shadow: 0px 2px 93px -19px rgba(0, 0, 0, 0.15);
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-size: 36px;
+    color: #474747;
+    margin: 30px 0 45px;
+}
+.row{
+    padding: 0 40px;
+    position: relative;
+}
+input{
+ width: 100%;
+ background: #FFFFFF;
+ box-shadow: 0px 7px 33px -4px rgba(0, 0, 0, 0.14);
+ border-radius: 34px;
+ border: none;
+ outline: none;
+ padding:20px 25px;
+}
+.row input::placeholder{
+    font-size: 16px;
+    color: #AAAAAA;
+    font-family: Montserrat;
+}
+input.icon{
+    font-size: 35px;
+    color: white;
+    background:yellowgreen;
+    width: auto;
+    border-radius: 50%;
+    padding: 0px 12px;
+    position: relative;
+    right: -42%;
+    top: -50px;
+    border:1px solid transparent;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.icon:hover{
+    color:yellowgreen;
+    background-color: white;
+    border-color: yellowgreen;
+}
+.row ul{
+    list-style: none;
+    text-align: left;
+}
+.row ul li{
+background: #FFFFFF;
+box-shadow: 0px 7px 33px -4px rgba(0, 0, 0, 0.14);
+border-radius: 34px;
+padding: 20px 25px;
+margin-bottom: 17px;
+font-size: 16px;
+color: #AAAAAA;
+position: relative;
+}
+.row ul li span{
+    position: absolute;
+    font-size: 22PX;
+    right: 9px;
+    top: 6px;
+    padding: 9px 16px;
+    border-radius: 50%;
+    box-shadow: 0Px 0px 23px -5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all .3s ease;
+
+}
+.row ul li span:hover{
+    color: white;
+    background: red;
+}
+
