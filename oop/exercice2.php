@@ -20,3 +20,4 @@ class Vehicle{
    
 }
 $obj= new Vehicle('make', '1908', 'RED', 'xx', 'zz');
+?>
