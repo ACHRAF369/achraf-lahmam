@@ -23,7 +23,15 @@ function getRepos() {
          
         //Creat the main Div
         let mainDiv = document.createElement("div");
+         
+        //creat repo Name Text
+        let repoName = document.createTextNode(repo.name);
 
+        // append the text to Main Div
+        mainDiv.appendChild(repoName);
+
+        // Append the main Div to Container
+        
         });
 
          });
