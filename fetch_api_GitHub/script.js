@@ -30,8 +30,8 @@ function getRepos() {
         // append the text to Main Div
         mainDiv.appendChild(repoName);
 
-        // Append the main Div to Container
-        
+        // Append the mainDiv to Container
+         reposData.appendChild(mainDiv);
         });
 
          });
