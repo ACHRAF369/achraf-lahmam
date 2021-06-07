@@ -13,14 +13,19 @@ function getRepos() {
     if(theInput.value == ''){ // if value impty
         reposData.innerHTML= "<span>Pleas write GitHub Username</span>";
     }else{
-         fetch('https://api.github.com/users/achraf369/repos').then((res)=>{
-             return res.json();
-         })
+         fetch('https://api.github.com/users/achraf369/repos').then((response)=> response.json())
          .then((repositories) => {
-        //   console.log(repositories);
+        //  Empty The Value
         reposData.innerHTML = '';
 
-         })
+        // loop on Repositories
+        repositories.forEach(repo =>{
+         
+            console.log(repo.name);
+
+        });
+
+         });
     }
     
 }
