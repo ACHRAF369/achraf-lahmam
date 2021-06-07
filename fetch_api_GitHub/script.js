@@ -21,7 +21,8 @@ function getRepos() {
         // loop on Repositories
         repositories.forEach(repo =>{
          
-            console.log(repo.name);
+        //Creat the main Div
+        let mainDiv = document.createElement("div");
 
         });
 
