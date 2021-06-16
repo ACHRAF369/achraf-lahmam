@@ -1,78 +1,78 @@
-let theInput = document.querySelector(".getuser");
-let getButton = document.querySelector(".btn-danger");
-let reposData = document.querySelector(".Show-Data")
 
-getButton.onclick = function(){
-alert("test")
-    getRepos();
-}
-
-// Get Repos Function
-function getRepos() {
-    if(theInput.value == ''){ // if value impty
-        reposData.innerHTML= "<span>Pleas write GitHub Username</span>";
-    }else{
-         fetch('https://api.github.com/users/achraf369/repos').then((response)=> response.json())
-         .then((repositories) => {
-        //  Empty The Value
-        reposData.innerHTML = '';
-
-        // loop on Repositories
-        repositories.forEach(repo =>{
-         
-        //Creat the main Div Element
-        let mainDiv = document.createElement("div");
-         
-        //creat repo Name Text
-        let repoName = document.createTextNode(repo.name);
-
-        // append the text to Main Div
-        mainDiv.appendChild(repoName);
-
-        // Append the mainDiv to Container
-        //  reposData.appendChild(mainDiv);
- 
-
-        //Creat repo URl Anchor
-        let theUrl = document.createElement('a');
-
-        //Creat Repo Url Text
-        let theUrl = document.createTextnode("visit");
-
-        // Append The Repo Url Text To Anchor Tag
-        theUrl.appendChild(theUrlText);
-
-         //Add the Hypertext Reference "href"
-         theUrl.href =`https//github.com/achraf369/${repo.name}`;
-        
-         //Set Attribut Blank
-         theUrl.setAttribute('target', '_blank');
+let user = document.querySelector('.form-control');
+let show = document.querySelector('#root');
+let search = document.querySelector('.btn');
+let username = document.querySelector('h1');
+let head = document.getElementById('head');
 
 
+search.addEventListener("click", function () {
+   // if value is empty
+    if (user.value === '') { 
+        show.innerHTML = "pleas write the UserName"
+    } else { // value is notb empty
+        fetch(`https://api.github.com/users/${user.value}/repos`).then(response => response.json()).then(data => {
+                show.innerHTML = '';
+                data.forEach(repo => {
+                    
+                    // insert avatar Url
+                    contDiv = document.createElement("div");
+                
+                    repoName = document.createTextNode(repo.name);
+                
+                    contDiv.appendChild(repoName);
+                
+                    username.innerHTML = user.value;
+                
+                    //stars
+                    let starsSpan = document.createElement("span");
 
-         //Append Url Anchor To Main Div
-         mainDiv.appendChild(theUrl);
-         
-         //Create Stars Count Span
-         let StarsSpan = document.createElement("span");
+                    starsSpan.className = ' stars '
 
-         //Creat the strars count 
-         let starsText = document.createTextnode(`Stars ${repo.stargazers_count}`);
+                    let starsText = document.createTextNode(`Stars${repo.stargazers_count}`);
 
-        //Add Stars 
+                    starsSpan.appendChild(starsText);
 
-         //Append the Main Div To Container
-         reposData.appendChild(mainDiv);
+                    contDiv.appendChild(starsSpan)
 
-         //
+                    //isseus
+                    let issuesSpan = document.createElement("span");
 
-      
-         
+                    issuesSpan.className = 'isseus'
+
+                    let issuesText = document.createTextNode(`isseus${repo.open_issues_count}`);
+
+                    issuesSpan.appendChild(issuesText);
+
+                    contDiv.appendChild(issuesSpan)
+
+                //    description
+                //    let description = document.getElementById('a');
+
+                //    description.className = 'description'
+                //    let descText = document.createTextNode(repo.description);
+
+                //    description.appendChild(descText);
+
+                //    contDiv.appendChild(description);
+
+                     contDiv.className = 'bg-light'
+                    show.appendChild(contDiv)
+                });
+                head.innerHTML = `
+
+                    <img src="${data.avatar_url}"/>
+
+                    `
+            });
 
 
-        });
-
-         });
     }
-    
-}
+
+
+});
+
+
+
+
+
