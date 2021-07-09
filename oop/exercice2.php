@@ -7,9 +7,7 @@ class Vehicle{
     public $engineNo;
    public function __construct($make, $model, $color, $Wheels, $engineNo){
         echo $this->make    =$make ;
-        
         echo $this->model   =$model ;
-      
         echo $this->color   =$color ;
     
         echo $this->Wheels  =$Wheels ;
